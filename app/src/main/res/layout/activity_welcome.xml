@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/app_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:background="@drawable/rounded_corners_aquagreen"
+        android:fontFamily="@font/gotham_bold"
+        android:gravity="center"
+        android:paddingStart="@dimen/_50sdp"
+        android:paddingEnd="@dimen/_50sdp"
+        android:text="@string/signup"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_logo" />
+
+    <TextView
+        android:id="@+id/tvSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/rounded_border_aquagreen"
+        android:fontFamily="@font/gotham_bold"
+        android:gravity="center"
+        android:paddingStart="@dimen/_50sdp"
+        android:paddingEnd="@dimen/_50sdp"
+        android:text="@string/signin"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSignUp" />
+
+
+    <TextView
+        android:id="@+id/tvAboutUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:gravity="center"
+        android:text="@string/aboutus"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivAboutUS"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/btn_round_aquagreen"
+        app:layout_constraintBottom_toTopOf="@id/tvAboutUs"
+        app:layout_constraintEnd_toEndOf="@id/tvAboutUs"
+        app:layout_constraintStart_toStartOf="@id/tvAboutUs" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.26" />
+
+    <TextView
+        android:id="@+id/tvServiceProvided"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:gravity="center"
+        android:text="@string/service_provided"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tvSignIn"
+        app:layout_constraintStart_toStartOf="@id/tvSignIn" />
+
+    <ImageView
+        android:id="@+id/ivServiceProvided"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/btn_round_aquagreen"
+        app:layout_constraintBottom_toTopOf="@id/tvServiceProvided"
+        app:layout_constraintEnd_toEndOf="@id/tvServiceProvided"
+        app:layout_constraintStart_toStartOf="@id/tvServiceProvided" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.74" />
+
+    <TextView
+        android:id="@+id/tvOurTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:gravity="center"
+        android:text="@string/ourteam"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline2" />
+
+    <ImageView
+        android:id="@+id/ivOurTeam"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/btn_round_aquagreen"
+        app:layout_constraintBottom_toTopOf="@id/tvOurTeam"
+        app:layout_constraintEnd_toEndOf="@id/tvOurTeam"
+        app:layout_constraintStart_toStartOf="@id/tvOurTeam" />
+</androidx.constraintlayout.widget.ConstraintLayout>
