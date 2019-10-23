@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_bg_grey"
     android:orientation="vertical">
 
     <ImageView
@@ -45,36 +46,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvWelcomeback" />
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/inputName"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_30sdp"
         android:layout_marginEnd="@dimen/_20sdp"
-        android:backgroundTint="@colors/colorPrimaryDark"
         android:hint="@string/hint_email"
-        android:textColorHint="@colors/app_color"
+        android:textColorHint="@color/app_color"
+        app:backgroundTint="@color/colorPrimaryDark"
         app:hintEnabled="true"
         app:layout_constraintTop_toBottomOf="@+id/tvSignInClean">
 
-        <EditText
-            android:id="@+id/editName"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@colors/colorPrimaryDark"
+            android:backgroundTint="@color/colorPrimaryDark"
             android:focusableInTouchMode="true"
             android:fontFamily="@font/gotham_book"
             android:imeOptions="actionDone"
             android:inputType="textEmailAddress"
             android:singleLine="true"
             android:text=""
-            android:textColor="@colors/app_color"
-            android:textColorHint="@colors/app_color"
-            android:textSize="14sp" />
-    </android.support.design.widget.TextInputLayout>
+            android:textColor="@color/app_color"
+            android:textColorHint="@color/app_color"
+            android:textSize="@dimen/_14sdp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -83,34 +84,55 @@
         android:layout_marginEnd="@dimen/_20sdp"
         android:backgroundTint="@color/colorPrimaryDark"
         android:hint="@string/hint_pass"
-        android:textColorHint="@colors/app_color"
+        android:textColorHint="@color/app_color"
         app:hintEnabled="true"
-        app:layout_constraintTop_toBottomOf="@+id/inputName"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail"
         app:passwordToggleDrawable="@drawable/pass_toggle"
         app:passwordToggleEnabled="true"
-        app:passwordToggleTint="@colors/colorPrimaryDark">
+        app:passwordToggleTint="@color/colorPrimaryDark">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@colors/colorPrimaryDark"
+            android:backgroundTint="@color/colorPrimaryDark"
             android:fontFamily="@font/gotham_book"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
             android:maxLength="18"
             android:singleLine="true"
             android:text=""
-            android:textColor="@colors/app_color"
-            android:textColorHint="@colors/app_color"
-            android:textSize="14sp" />
-    </android.support.design.widget.TextInputLayout>
-
+            android:textColor="@color/app_color"
+            android:textColorHint="@color/app_color"
+            android:textSize="@dimen/_14sdp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/tvSignIn"
+        android:id="@+id/tvHavingTrouble"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/_55sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:text="@string/having_trouble"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPass" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@id/tvHavingTrouble"
+        app:layout_constraintStart_toStartOf="@id/tvHavingTrouble"
+        app:layout_constraintTop_toBottomOf="@id/tvHavingTrouble" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSignin"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_40sdp"
         android:layout_marginTop="@dimen/_20sdp"
         android:background="@drawable/rounded_border_aquagreen"
         android:fontFamily="@font/gotham_bold"
@@ -122,7 +144,19 @@
         android:textSize="@dimen/_20sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputPass" />
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+    <TextView
+        android:id="@+id/tvNotYou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:text="@string/not_you"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignin" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

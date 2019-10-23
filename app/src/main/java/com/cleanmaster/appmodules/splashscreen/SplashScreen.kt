@@ -8,6 +8,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.cleanmaster.R
 import com.cleanmaster.appmodules.welcomescreen.SigninScreen
+import com.cleanmaster.appmodules.welcomescreen.WelcomeScreen
 
 class SplashScreen : AppCompatActivity() {
     lateinit var ivLogo : ImageView
@@ -20,14 +21,12 @@ class SplashScreen : AppCompatActivity() {
 
         val myFadeInAnimation = AnimationUtils.loadAnimation(this,R.anim.tween)
         ivLogo.startAnimation(myFadeInAnimation);
-
-
-
+        goNext()
     }
      fun goNext(){
          Handler().postDelayed({
              /* Create an Intent that will start the Login-Activity. */
-             val mainIntent = Intent(this, SigninScreen::class.java)
+             val mainIntent = Intent(this, WelcomeScreen::class.java)
              startActivity(mainIntent)
              finish()
          }, SPLASH_DISPLAY_LENGTH.toLong())

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_grey"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_30sdp">
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/app_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvWelcomeback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:fontFamily="@font/gotham_boldita"
+            android:text="@string/join_us"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_logo" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:hint="@string/hint_name"
+            android:textColorHint="@color/app_color"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:hintEnabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/tvWelcomeback">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/gotham_book"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/app_color"
+                android:textColorHint="@color/app_color"
+                android:textSize="@dimen/_14sdp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvDOB"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:gravity="start|bottom"
+            android:text="@string/hint_dob"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintTop_toBottomOf="@+id/inputName" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="0.1dp"
+            android:background="@color/app_color"
+            app:layout_constraintEnd_toEndOf="@id/tvDOB"
+            app:layout_constraintStart_toStartOf="@id/tvDOB"
+            app:layout_constraintTop_toBottomOf="@id/tvDOB" />
+
+        <!--  <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/editDOB"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:backgroundTint="@color/colorPrimaryDark"
+              android:fontFamily="@font/gotham_book"
+              android:imeOptions="actionDone"
+              android:inputType="textPassword"
+              android:maxLength="18"
+              android:singleLine="true"
+              android:text=""
+              android:textColor="@color/app_color"
+              android:textColorHint="@color/app_color"
+              android:textSize="@dimen/_14sdp" />
+      </com.google.android.material.textfield.TextInputLayout>-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:hint="@string/hint_email"
+            android:textColorHint="@color/app_color"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:hintEnabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/tvDOB">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/gotham_book"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/app_color"
+                android:textColorHint="@color/app_color"
+                android:textSize="@dimen/_14sdp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:hint="@string/hint_pass"
+            android:textColorHint="@color/app_color"
+            app:hintEnabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/inputEmail"
+            app:passwordToggleDrawable="@drawable/pass_toggle"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorPrimaryDark">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:fontFamily="@font/gotham_book"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLength="18"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/app_color"
+                android:textColorHint="@color/app_color"
+                android:textSize="@dimen/_14sdp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputConPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:hint="@string/hint_con_pass"
+            android:textColorHint="@color/app_color"
+            app:hintEnabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/inputPass"
+            app:passwordToggleDrawable="@drawable/pass_toggle"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorPrimaryDark">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editConPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:fontFamily="@font/gotham_book"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLength="18"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/app_color"
+                android:textColorHint="@color/app_color"
+                android:textSize="@dimen/_14sdp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/rounded_border_aquagreen"
+            android:fontFamily="@font/gotham_bold"
+            android:gravity="center"
+            android:paddingStart="@dimen/_50sdp"
+            android:paddingEnd="@dimen/_50sdp"
+            android:text="@string/signup"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/_20sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputConPass" />
+
+        <TextView
+            android:id="@+id/tvAlreadybeen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:text="@string/already_been"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSignup" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
