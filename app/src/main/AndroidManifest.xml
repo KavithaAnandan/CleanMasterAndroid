@@ -25,5 +25,8 @@
         <activity
             android:name=".appmodules.homescreen.HomeScreen"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".appmodules.signup.SignupScreen"
+            android:screenOrientation="portrait" />
     </application>
 </manifest>

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/app_bg_grey"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -197,7 +197,7 @@
                 android:textSize="@dimen/_14sdp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.button.MaterialButton
+        <TextView
             android:id="@+id/btnSignup"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/_40sdp"

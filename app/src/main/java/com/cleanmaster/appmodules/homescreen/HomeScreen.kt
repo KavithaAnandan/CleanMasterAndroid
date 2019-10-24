@@ -16,6 +16,13 @@ class HomeScreen : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         initViews()
+        if (savedInstanceState == null) {
+            val fragment = HomeFragment()
+            supportFragmentManager.beginTransaction().replace(R.id.containerHome ,
+                fragment, fragment.javaClass.getSimpleName())
+                .commit()
+        }
+
     }
 
     private fun initViews() {
@@ -31,10 +38,17 @@ class HomeScreen : BaseActivity() {
     }
 
     private fun setupBottomNavigationView() {
+
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.menu_home -> {
                     showToast("Home")
+                    val fragment = HomeFragment()
+                    supportFragmentManager.beginTransaction().replace(
+                        R.id.containerHome, fragment,
+                        fragment.javaClass.getSimpleName()
+                    ).commit()
+
                     true
                 }
                 R.id.menu_search -> {
