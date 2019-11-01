@@ -38,6 +38,8 @@
     <string name="menu_home">Home</string>
 
 
-    <!---->
+    <!-- Cleaning Screen -->
+    <string name="enter_exact">Enter Exact Area</string>
+    <string name="cont">Continue</string>
 
 </resources>
