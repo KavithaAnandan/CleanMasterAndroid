@@ -2,7 +2,7 @@ package com.cleanmaster.appmodules.homescreen
 
 import android.os.Bundle
 import com.cleanmaster.R
-import com.cleanmaster.appmodules.common.BaseActivity
+import com.cleanmaster.appmodules.base.BaseActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.romainpiel.shimmer.Shimmer
 import com.romainpiel.shimmer.ShimmerTextView

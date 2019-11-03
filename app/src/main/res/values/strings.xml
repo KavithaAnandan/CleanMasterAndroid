@@ -4,6 +4,7 @@
 
     <!-- Splash WelcomeScreen -->
 
+    <string name="api_error">An error occurred while loading the posts</string>
 
     <!-- WelcomeScreen -->
     <string name="signup">Sign Up</string>

@@ -1,4 +1,4 @@
-package com.cleanmaster.appmodules.common
+package com.cleanmaster.appmodules.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
