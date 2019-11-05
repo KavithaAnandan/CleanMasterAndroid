@@ -13,9 +13,9 @@ import javax.inject.Inject
 class HomeViewModel : BaseViewModel() {
     @Inject
     lateinit var apiInterface: ApiInterface
-    private val loadError = MutableLiveData<Boolean>()
-    private val loading = MutableLiveData<Boolean>()
-    private val serviceLiveData: MutableLiveData<List<HomeResponse>>? = null
+    private val loadError: MutableLiveData<Boolean> = MutableLiveData()
+    private val loading: MutableLiveData<Boolean> = MutableLiveData()
+    private val serviceLiveData: MutableLiveData<List<HomeResponse>> = MutableLiveData()
     private lateinit var observable: Disposable
 
     init {
