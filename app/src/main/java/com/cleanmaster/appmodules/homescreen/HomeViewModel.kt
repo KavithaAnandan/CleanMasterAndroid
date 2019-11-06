@@ -18,9 +18,9 @@ class HomeViewModel : BaseViewModel() {
     private val serviceLiveData: MutableLiveData<List<HomeResponse>> = MutableLiveData()
     private lateinit var observable: Disposable
 
-    init {
+   /* init {
         loadService()
-    }
+    }*/
 
 
     fun onRetrieveStart() {

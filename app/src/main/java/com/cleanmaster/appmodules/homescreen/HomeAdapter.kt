@@ -9,16 +9,23 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cleanmaster.R
 import com.cleanmaster.model.apimodel.home.HomeResponse
 import kotlinx.android.synthetic.main.adapter_home.view.*
-import java.lang.Exception
 
 class HomeAdapter(var context: Context) : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
 
-    fun refresh(listHome : List<HomeResponse>){
+    var arrListHome: List<HomeResponse> = ArrayList()
 
+    fun refresh(listHome: List<HomeResponse>) {
+        if (arrListHome.isNotEmpty()) {
+            try {
+                this.arrListHome = listHome
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
     }
 
     override fun getItemCount(): Int {
-        return 9
+        return arrListHome.size
     }
 
 
@@ -30,16 +37,16 @@ class HomeAdapter(var context: Context) : RecyclerView.Adapter<HomeAdapter.ViewH
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        try{
+        try {
             holder.tvServiceName.isSelected = true
-        }catch (e:Exception){
+        } catch (e: Exception) {
 
         }
 
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        var tvServiceName:TextView = view.tv_Cleaning
+        var tvServiceName: TextView = view.tv_Cleaning
 
     }
 

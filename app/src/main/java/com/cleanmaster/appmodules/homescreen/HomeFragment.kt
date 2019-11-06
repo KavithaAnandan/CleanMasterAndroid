@@ -13,9 +13,9 @@ import com.cleanmaster.R
 import com.cleanmaster.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
-    lateinit var rvHome: RecyclerView
     lateinit var homeViewModel: HomeViewModel
     lateinit var fragmentHomeBinding: FragmentHomeBinding
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -34,14 +34,13 @@ class HomeFragment : Fragment() {
     }
 
     private fun initViews(view: View?) {
-        rvHome = view!!.findViewById(R.id.rvHome)
+        var rvHome: RecyclerView = fragmentHomeBinding.rvHome
+        homeViewModel.loadService()
 
-        setHomeAdapter()
-
-
+        setHomeAdapter(rvHome)
     }
 
-    fun setHomeAdapter() {
+    fun setHomeAdapter(rvHome: RecyclerView) {
         rvHome.setLayoutManager(GridLayoutManager(activity, 3))
         rvHome.setHasFixedSize(true)
 
